@@ -1,3 +1,4 @@
+
 import React from "react";
 import TourPackageCard from "../../App/Components/Card/TourPackageCard";
 import Error from "../../App/Error";
@@ -16,11 +17,13 @@ const TourPackage = () => {
   if (!isLoading && isError) {
     content = <Error message="There was an error" />;
   }
-  //   if (!isLoading && !isError && data?.data?.length > 0) {
-  //     content = todos?.map((todo) => <Todo key={todo.id} todo={todo} />);
-  //   }
+    if (!isLoading && !isError && data?.data?.length > 0) {
+      content = data?.data?.map((item,index) => <TourPackageCard key={index} data={item} />);
+    }
+
   return (
     <div>
+
       <div className="ud-header bg-transparent absolute top-0 left-0 z-40 w-full flex  items-center">
         <div className="container">
           <div className="flex -mx-4 items-center justify-between relative">
@@ -344,7 +347,7 @@ const TourPackage = () => {
               </div>
               <div className="sm:flex justify-end hidden pr-16 lg:pr-0">
                 <a
-                  href="signin.html"
+                  href=""
                   className="
                   text-base
                   font-medium
@@ -382,11 +385,7 @@ const TourPackage = () => {
       </div>
 
       <div
-        className="
-        relative
-        z-10
-        pt-[120px]
-        md:pt-[130px]
+        className="relative z-10 pt-[120px] md:pt-[130px]
         lg:pt-[160px]
         pb-[100px]
         bg-primary
@@ -471,27 +470,16 @@ const TourPackage = () => {
         </div>
       </div>
 
+
       <section className="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
         <div className="container">
-          <div className="flex justify-around flex-wrap -mx-4">
-            <TourPackageCard />
-            <TourPackageCard />
-            <TourPackageCard />
-            <TourPackageCard />
-            <TourPackageCard />
-            <TourPackageCard />
-            <TourPackageCard />
-            <TourPackageCard />
+          <div className="flex justify-around flex-wrap -mx-1">
+           {content}
           </div>
         </div>
       </section>
 
-      <a href="/" className="
-        hidden
-        items-center
-        justify-center
-        bg-primary
-        text-white
+      {/* <a href="/" className="hidden items-center justify-centerbg-primarytext-white
         w-10
         h-10
         rounded-md
@@ -507,7 +495,7 @@ const TourPackage = () => {
         duration-300
         ease-in-out
       "
-      ></a>
+      ></a> */}
     </div>
   );
 };
