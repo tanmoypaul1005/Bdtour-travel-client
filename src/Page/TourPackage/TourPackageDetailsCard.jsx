@@ -1,51 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Details | Play Tailwind</title>
-    <link
-      rel="shortcut icon"
-      href="assets/images/favicon.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="assets/css/animate.css" />
-    <link rel="stylesheet" href="assets/css/tailwind.css" />
+import React from 'react';
+import { formatDate } from '../../Utility/UtilityFunctions';
 
-    <!-- ==== WOW JS ==== -->
-    <script src="assets/js/wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
-  </head>
-  <body>
-   
-
-    <!-- ====== Banner Section Start -->
-    <div
-      class="
-        relative
-        z-10
-        pt-[120px]
-        md:pt-[130px]
-        lg:pt-[160px]
-        pb-[100px]
-        bg-primary
-        overflow-hidden
+const TourPackageDetailsCard = ({data}) => {
+    console.log("data",data)
+    return (
+        <div>
+        <div className="
+      
       "
     >
-      <div class="container">
-        <div class="flex flex-wrap items-center -mx-4">
-          <div class="w-full px-4">
-            <div class="text-center">
-              <h1 class="font-semibold text-white text-4xl">Blog Details</h1>
-            </div>
-          </div>
-        </div>
-      </div>
       <div>
-        <span class="absolute top-0 left-0 z-[-1]">
+        <span className="absolute top-0 left-0 z-[-1]">
           <svg
             width="495"
             height="470"
@@ -76,7 +41,7 @@
             />
           </svg>
         </span>
-        <span class="absolute top-0 right-0 z-[-1]">
+        <span className="absolute top-0 right-0 z-[-1]">
           <svg
             width="493"
             height="470"
@@ -110,15 +75,15 @@
         </span>
       </div>
     </div>
-    <!-- ====== Banner Section End -->
+    {/* <!-- ====== Banner Section End -->
 
-    <!-- ====== Blog Details Section Start -->
-    <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
-      <div class="container">
-        <div class="flex flex-wrap justify-center -mx-4">
-          <div class="w-full px-4">
+    <!-- ====== Blog Details Section Start --> */}
+    <section className="pt-5 pb-10 lg:pb-20">
+      <div className="container">
+        <div className="flex flex-wrap justify-center -mx-4">
+          <div className="w-full px-4">
             <div
-              class="
+              className="
                 relative
                 rounded
                 overflow-hidden
@@ -134,12 +99,12 @@
               "
             >
               <img
-                src="assets/images/blog/blog-details-01.jpg"
-                alt="image"
-                class="w-full h-full object-cover object-center"
+                src={data?.image}
+                alt=""
+                className="w-full h-full object-cover object-center"
               />
               <div
-                class="
+                className="
                   absolute
                   w-full
                   h-full
@@ -153,44 +118,21 @@
                   to-transparent
                 "
               >
-                <div class="flex flex-wrap items-center p-4 sm:p-8 pb-4">
-                  <div class="flex items-center mb-4 mr-5 md:mr-10">
-                    <div class="w-10 h-10 rounded-full overflow-hidden mr-4">
-                      <img
-                        src="assets/images/blog/author-01.png"
-                        alt="image"
-                        class="w-full"
-                      />
+                <div className="flex flex-wrap items-center p-4 sm:p-8 pb-4">
+                  <div className="flex items-center mb-4 mr-5 md:mr-10">
+                    <div className="w-10 h-10 rounded-full overflow-hidden mr-4">
+      
                     </div>
-                    <p class="text-base text-white font-medium">
-                      By
-                      <a
-                        href="javascript:void(0)"
-                        class="text-white hover:opacity-70"
-                      >
-                        Samuyl Joshi
-                      </a>
-                    </p>
+                   
+                      <div className=" capitalize text-white hover:opacity-70 ">
+                       {data?.place}
+                      </div>
+             
                   </div>
-                  <div class="flex items-center mb-4">
-                    <p
-                      class="
-                        flex
-                        items-center
-                        text-sm
-                        font-medium
-                        text-white
-                        mr-5
-                        md:mr-8
-                      "
-                    >
-                      <span class="mr-3">
-                        <svg
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          class="fill-current"
-                        >
+                  <div className="flex items-center mb-4">
+                    <p className="flex items-center text-sm font-medium  text-white mr-5 md:mr-8">
+                      <span className="mr-3">
+                        <svg width="15" height="15" viewBox="0 0 15 15" className="fill-current">
                           <path
                             d="M3.8958 8.67529H3.10715C2.96376 8.67529 2.86816 8.77089 2.86816 8.91428V9.67904C2.86816 9.82243 2.96376 9.91802 3.10715 9.91802H3.8958C4.03919 9.91802 4.13479 9.82243 4.13479 9.67904V8.91428C4.13479 8.77089 4.03919 8.67529 3.8958 8.67529Z"
                           />
@@ -220,67 +162,52 @@
                           />
                         </svg>
                       </span>
-                      26 Feb 2023
+                      Start Date : {formatDate(data.package_startDate)}
+                    </p>
+                    <p className="flex items-center text-sm font-medium  text-white mr-5 md:mr-8">
+                      <span className="mr-3">
+                        <svg width="15" height="15" viewBox="0 0 15 15" className="fill-current">
+                          <path
+                            d="M3.8958 8.67529H3.10715C2.96376 8.67529 2.86816 8.77089 2.86816 8.91428V9.67904C2.86816 9.82243 2.96376 9.91802 3.10715 9.91802H3.8958C4.03919 9.91802 4.13479 9.82243 4.13479 9.67904V8.91428C4.13479 8.77089 4.03919 8.67529 3.8958 8.67529Z"
+                          />
+                          <path
+                            d="M6.429 8.67529H5.64035C5.49696 8.67529 5.40137 8.77089 5.40137 8.91428V9.67904C5.40137 9.82243 5.49696 9.91802 5.64035 9.91802H6.429C6.57239 9.91802 6.66799 9.82243 6.66799 9.67904V8.91428C6.66799 8.77089 6.5485 8.67529 6.429 8.67529Z"
+                          />
+                          <path
+                            d="M8.93779 8.67529H8.14914C8.00575 8.67529 7.91016 8.77089 7.91016 8.91428V9.67904C7.91016 9.82243 8.00575 9.91802 8.14914 9.91802H8.93779C9.08118 9.91802 9.17678 9.82243 9.17678 9.67904V8.91428C9.17678 8.77089 9.08118 8.67529 8.93779 8.67529Z"
+                          />
+                          <path
+                            d="M11.472 8.67529H10.6833C10.5399 8.67529 10.4443 8.77089 10.4443 8.91428V9.67904C10.4443 9.82243 10.5399 9.91802 10.6833 9.91802H11.472C11.6154 9.91802 11.711 9.82243 11.711 9.67904V8.91428C11.711 8.77089 11.5915 8.67529 11.472 8.67529Z"
+                          />
+                          <path
+                            d="M3.8958 11.1606H3.10715C2.96376 11.1606 2.86816 11.2562 2.86816 11.3996V12.1644C2.86816 12.3078 2.96376 12.4034 3.10715 12.4034H3.8958C4.03919 12.4034 4.13479 12.3078 4.13479 12.1644V11.3996C4.13479 11.2562 4.03919 11.1606 3.8958 11.1606Z"
+                          />
+                          <path
+                            d="M6.429 11.1606H5.64035C5.49696 11.1606 5.40137 11.2562 5.40137 11.3996V12.1644C5.40137 12.3078 5.49696 12.4034 5.64035 12.4034H6.429C6.57239 12.4034 6.66799 12.3078 6.66799 12.1644V11.3996C6.66799 11.2562 6.5485 11.1606 6.429 11.1606Z"
+                          />
+                          <path
+                            d="M8.93779 11.1606H8.14914C8.00575 11.1606 7.91016 11.2562 7.91016 11.3996V12.1644C7.91016 12.3078 8.00575 12.4034 8.14914 12.4034H8.93779C9.08118 12.4034 9.17678 12.3078 9.17678 12.1644V11.3996C9.17678 11.2562 9.08118 11.1606 8.93779 11.1606Z"
+                          />
+                          <path
+                            d="M11.472 11.1606H10.6833C10.5399 11.1606 10.4443 11.2562 10.4443 11.3996V12.1644C10.4443 12.3078 10.5399 12.4034 10.6833 12.4034H11.472C11.6154 12.4034 11.711 12.3078 11.711 12.1644V11.3996C11.711 11.2562 11.5915 11.1606 11.472 11.1606Z"
+                          />
+                          <path
+                            d="M13.2637 3.3697H7.64754V2.58105C8.19721 2.43765 8.62738 1.91189 8.62738 1.31442C8.62738 0.597464 8.02992 0 7.28906 0C6.54821 0 5.95074 0.597464 5.95074 1.31442C5.95074 1.91189 6.35702 2.41376 6.93058 2.58105V3.3697H1.31442C0.597464 3.3697 0 3.96716 0 4.68412V13.2637C0 13.9807 0.597464 14.5781 1.31442 14.5781H13.2637C13.9807 14.5781 14.5781 13.9807 14.5781 13.2637V4.68412C14.5781 3.96716 13.9807 3.3697 13.2637 3.3697ZM6.6677 1.31442C6.6677 0.979841 6.93058 0.716957 7.28906 0.716957C7.62364 0.716957 7.91042 0.979841 7.91042 1.31442C7.91042 1.649 7.64754 1.91189 7.28906 1.91189C6.95448 1.91189 6.6677 1.6251 6.6677 1.31442ZM1.31442 4.08665H13.2637C13.5983 4.08665 13.8612 4.34954 13.8612 4.68412V6.45261H0.716957V4.68412C0.716957 4.34954 0.979841 4.08665 1.31442 4.08665ZM13.2637 13.8612H1.31442C0.979841 13.8612 0.716957 13.5983 0.716957 13.2637V7.16957H13.8612V13.2637C13.8612 13.5983 13.5983 13.8612 13.2637 13.8612Z"
+                          />
+                        </svg>
+                      </span>
+                      End Date : {formatDate(data.package_startDate)}
                     </p>
 
-                    <p
-                      class="
-                        flex
-                        items-center
-                        text-sm
-                        font-medium
-                        text-white
-                        mr-5
-                        md:mr-8
-                      "
-                    >
-                      <span class="mr-3">
-                        <svg
-                          width="18"
-                          height="13"
-                          viewBox="0 0 18 13"
-                          class="fill-current"
-                        >
-                          <path
-                            d="M15.9754 0H2.02539C1.09727 0 0.337891 0.759375 0.337891 1.6875V10.6875C0.337891 11.3062 0.647266 11.8406 1.18164 12.15C1.43477 12.2906 1.74414 12.375 2.02539 12.375C2.30664 12.375 2.58789 12.2906 2.86914 12.15L5.34414 10.7156C5.45664 10.6594 5.56914 10.6312 5.68164 10.6312H15.9473C16.8754 10.6312 17.6348 9.87187 17.6348 8.94375V1.6875C17.6629 0.759375 16.9035 0 15.9754 0ZM16.6785 8.94375C16.6785 9.3375 16.3691 9.64687 15.9754 9.64687H5.70977C5.42852 9.64687 5.11914 9.73125 4.86602 9.87187L2.39102 11.3063C2.16602 11.4187 1.91289 11.4187 1.68789 11.3063C1.46289 11.1938 1.35039 10.9688 1.35039 10.7156V1.6875C1.35039 1.29375 1.65977 0.984375 2.05352 0.984375H16.0035C16.3973 0.984375 16.7066 1.29375 16.7066 1.6875V8.94375H16.6785Z"
-                          />
-                          <path
-                            d="M12.5721 3.375H5.03457C4.75332 3.375 4.52832 3.6 4.52832 3.88125C4.52832 4.1625 4.75332 4.3875 5.03457 4.3875H12.6002C12.8814 4.3875 13.1064 4.1625 13.1064 3.88125C13.1064 3.6 12.8533 3.375 12.5721 3.375Z"
-                          />
-                          <path
-                            d="M11.3908 6.55322H5.03457C4.75332 6.55322 4.52832 6.77822 4.52832 7.05947C4.52832 7.34072 4.75332 7.56572 5.03457 7.56572H11.4189C11.7002 7.56572 11.9252 7.34072 11.9252 7.05947C11.9252 6.77822 11.6721 6.55322 11.3908 6.55322Z"
-                          />
-                        </svg>
-                      </span>
-                      05
-                    </p>
-                    <p class="flex items-center text-sm font-medium text-white">
-                      <span class="mr-3">
-                        <svg
-                          width="20"
-                          height="12"
-                          viewBox="0 0 20 12"
-                          class="fill-current"
-                        >
-                          <path
-                            d="M10.2559 3.8125C9.03711 3.8125 8.06836 4.8125 8.06836 6C8.06836 7.1875 9.06836 8.1875 10.2559 8.1875C11.4434 8.1875 12.4434 7.1875 12.4434 6C12.4434 4.8125 11.4746 3.8125 10.2559 3.8125ZM10.2559 7.09375C9.66211 7.09375 9.16211 6.59375 9.16211 6C9.16211 5.40625 9.66211 4.90625 10.2559 4.90625C10.8496 4.90625 11.3496 5.40625 11.3496 6C11.3496 6.59375 10.8496 7.09375 10.2559 7.09375Z"
-                          />
-                          <path
-                            d="M19.7559 5.625C17.6934 2.375 14.1309 0.4375 10.2559 0.4375C6.38086 0.4375 2.81836 2.375 0.755859 5.625C0.630859 5.84375 0.630859 6.125 0.755859 6.34375C2.81836 9.59375 6.38086 11.5312 10.2559 11.5312C14.1309 11.5312 17.6934 9.59375 19.7559 6.34375C19.9121 6.125 19.9121 5.84375 19.7559 5.625ZM10.2559 10.4375C6.84961 10.4375 3.69336 8.78125 1.81836 5.96875C3.69336 3.1875 6.84961 1.53125 10.2559 1.53125C13.6621 1.53125 16.8184 3.1875 18.6934 5.96875C16.8184 8.78125 13.6621 10.4375 10.2559 10.4375Z"
-                          />
-                        </svg>
-                      </span>
-                      05
-                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="flex flex-wrap -mx-4">
-              <div class="w-full lg:w-8/12 px-4">
+            <div className="flex flex-wrap -mx-4">
+              <div className="w-full lg:w-8/12 px-4">
                 <div>
                   <h2
-                    class="
+                    className="
                       font-bold
                       text-dark text-[26px]
                       sm:text-3xl
@@ -295,76 +222,104 @@
                     data-wow-delay=".1s
                     "
                   >
-                    Facing a challenge is kind of a turn-on for an easy rider
+                    {data?.title}
                   </h2>
                   <p
-                    class="
+                    className="
                       text-base text-body-color
                       leading-relaxed
                       mb-8
                       wow
                       fadeInUp
+                      capitalize
                     "
                     data-wow-delay=".1s"
                   >
-                    There's a time and place for everything… including asking
-                    for reviews. For instance: you should not asking for a
-                    review on your checkout page. The sole purpose of this page
-                    is to guide your customer to complete their purchase, and
-                    this means that the page should be as minimalist and
-                    pared-down possible. You don't want to have any unnecessary
-                    elements or Call To Actions.
+                  {data?.short_description}
                   </p>
-                  <p
-                    class="
-                      text-base text-body-color
-                      leading-relaxed
-                      mb-10
-                      wow
-                      fadeInUp
-                    "
-                    data-wow-delay=".1s"
-                  >
-                    There's a time and place for everything… including asking
-                    for reviews. For instance: you should not asking for a
-                    review on your checkout page. The sole purpose of this page
-                    is to guide your customer to complete their purchase, and
-                    this means that the page should be as minimalist and
-                    pared-down possible. You don't want to have any unnecessary
-                    elements or Call To Actions.
-                  </p>
-                  <h3
-                    class="
-                      font-bold
-                      mb-8
-                      text-dark text-2xl
-                      sm:text-[26px]
-                      wow
-                      fadeInUp
-                    "
-                    data-wow-delay=".1s"
-                  >
-                    Sea no quidam vulputate
-                  </h3>
-                  <p
-                    class="
-                      text-base text-body-color
-                      leading-relaxed
-                      mb-10
-                      wow
-                      fadeInUp
-                    "
-                    data-wow-delay=".1s"
-                  >
-                    At quo cetero fastidii. Usu ex ornatus corpora sententiae,
-                    vocibus deleniti ut nec. Ut enim eripuit eligendi est, in
-                    iracundia signiferumque quo. Sed virtute suavitate
-                    suscipiantur ea, dolor this can eloquentiam ei pro. Suas
-                    adversarium interpretaris eu sit, eum viris impedit ne.
-                    Erant appareat corrumpit ei vel.
-                  </p>
+                  <p className="flex items-center text-sm font-medium text-black mr-5 md:mr-8">
+                      <span className="mr-3">
+                        <svg width="15" height="15" viewBox="0 0 15 15" className="fill-current">
+                          <path
+                            d="M3.8958 8.67529H3.10715C2.96376 8.67529 2.86816 8.77089 2.86816 8.91428V9.67904C2.86816 9.82243 2.96376 9.91802 3.10715 9.91802H3.8958C4.03919 9.91802 4.13479 9.82243 4.13479 9.67904V8.91428C4.13479 8.77089 4.03919 8.67529 3.8958 8.67529Z"
+                          />
+                          <path
+                            d="M6.429 8.67529H5.64035C5.49696 8.67529 5.40137 8.77089 5.40137 8.91428V9.67904C5.40137 9.82243 5.49696 9.91802 5.64035 9.91802H6.429C6.57239 9.91802 6.66799 9.82243 6.66799 9.67904V8.91428C6.66799 8.77089 6.5485 8.67529 6.429 8.67529Z"
+                          />
+                          <path
+                            d="M8.93779 8.67529H8.14914C8.00575 8.67529 7.91016 8.77089 7.91016 8.91428V9.67904C7.91016 9.82243 8.00575 9.91802 8.14914 9.91802H8.93779C9.08118 9.91802 9.17678 9.82243 9.17678 9.67904V8.91428C9.17678 8.77089 9.08118 8.67529 8.93779 8.67529Z"
+                          />
+                          <path
+                            d="M11.472 8.67529H10.6833C10.5399 8.67529 10.4443 8.77089 10.4443 8.91428V9.67904C10.4443 9.82243 10.5399 9.91802 10.6833 9.91802H11.472C11.6154 9.91802 11.711 9.82243 11.711 9.67904V8.91428C11.711 8.77089 11.5915 8.67529 11.472 8.67529Z"
+                          />
+                          <path
+                            d="M3.8958 11.1606H3.10715C2.96376 11.1606 2.86816 11.2562 2.86816 11.3996V12.1644C2.86816 12.3078 2.96376 12.4034 3.10715 12.4034H3.8958C4.03919 12.4034 4.13479 12.3078 4.13479 12.1644V11.3996C4.13479 11.2562 4.03919 11.1606 3.8958 11.1606Z"
+                          />
+                          <path
+                            d="M6.429 11.1606H5.64035C5.49696 11.1606 5.40137 11.2562 5.40137 11.3996V12.1644C5.40137 12.3078 5.49696 12.4034 5.64035 12.4034H6.429C6.57239 12.4034 6.66799 12.3078 6.66799 12.1644V11.3996C6.66799 11.2562 6.5485 11.1606 6.429 11.1606Z"
+                          />
+                          <path
+                            d="M8.93779 11.1606H8.14914C8.00575 11.1606 7.91016 11.2562 7.91016 11.3996V12.1644C7.91016 12.3078 8.00575 12.4034 8.14914 12.4034H8.93779C9.08118 12.4034 9.17678 12.3078 9.17678 12.1644V11.3996C9.17678 11.2562 9.08118 11.1606 8.93779 11.1606Z"
+                          />
+                          <path
+                            d="M11.472 11.1606H10.6833C10.5399 11.1606 10.4443 11.2562 10.4443 11.3996V12.1644C10.4443 12.3078 10.5399 12.4034 10.6833 12.4034H11.472C11.6154 12.4034 11.711 12.3078 11.711 12.1644V11.3996C11.711 11.2562 11.5915 11.1606 11.472 11.1606Z"
+                          />
+                          <path
+                            d="M13.2637 3.3697H7.64754V2.58105C8.19721 2.43765 8.62738 1.91189 8.62738 1.31442C8.62738 0.597464 8.02992 0 7.28906 0C6.54821 0 5.95074 0.597464 5.95074 1.31442C5.95074 1.91189 6.35702 2.41376 6.93058 2.58105V3.3697H1.31442C0.597464 3.3697 0 3.96716 0 4.68412V13.2637C0 13.9807 0.597464 14.5781 1.31442 14.5781H13.2637C13.9807 14.5781 14.5781 13.9807 14.5781 13.2637V4.68412C14.5781 3.96716 13.9807 3.3697 13.2637 3.3697ZM6.6677 1.31442C6.6677 0.979841 6.93058 0.716957 7.28906 0.716957C7.62364 0.716957 7.91042 0.979841 7.91042 1.31442C7.91042 1.649 7.64754 1.91189 7.28906 1.91189C6.95448 1.91189 6.6677 1.6251 6.6677 1.31442ZM1.31442 4.08665H13.2637C13.5983 4.08665 13.8612 4.34954 13.8612 4.68412V6.45261H0.716957V4.68412C0.716957 4.34954 0.979841 4.08665 1.31442 4.08665ZM13.2637 13.8612H1.31442C0.979841 13.8612 0.716957 13.5983 0.716957 13.2637V7.16957H13.8612V13.2637C13.8612 13.5983 13.5983 13.8612 13.2637 13.8612Z"
+                          />
+                        </svg>
+                      </span>
+                     Start Date: {formatDate(data.package_startDate)}
+                    </p>
+                    <p className="flex items-center text-sm font-medium  text-black mr-5 md:mr-8">
+                      <span className="mr-3">
+                        <svg width="15" height="15" viewBox="0 0 15 15" className="fill-current">
+                          <path
+                            d="M3.8958 8.67529H3.10715C2.96376 8.67529 2.86816 8.77089 2.86816 8.91428V9.67904C2.86816 9.82243 2.96376 9.91802 3.10715 9.91802H3.8958C4.03919 9.91802 4.13479 9.82243 4.13479 9.67904V8.91428C4.13479 8.77089 4.03919 8.67529 3.8958 8.67529Z"
+                          />
+                          <path
+                            d="M6.429 8.67529H5.64035C5.49696 8.67529 5.40137 8.77089 5.40137 8.91428V9.67904C5.40137 9.82243 5.49696 9.91802 5.64035 9.91802H6.429C6.57239 9.91802 6.66799 9.82243 6.66799 9.67904V8.91428C6.66799 8.77089 6.5485 8.67529 6.429 8.67529Z"
+                          />
+                          <path
+                            d="M8.93779 8.67529H8.14914C8.00575 8.67529 7.91016 8.77089 7.91016 8.91428V9.67904C7.91016 9.82243 8.00575 9.91802 8.14914 9.91802H8.93779C9.08118 9.91802 9.17678 9.82243 9.17678 9.67904V8.91428C9.17678 8.77089 9.08118 8.67529 8.93779 8.67529Z"
+                          />
+                          <path
+                            d="M11.472 8.67529H10.6833C10.5399 8.67529 10.4443 8.77089 10.4443 8.91428V9.67904C10.4443 9.82243 10.5399 9.91802 10.6833 9.91802H11.472C11.6154 9.91802 11.711 9.82243 11.711 9.67904V8.91428C11.711 8.77089 11.5915 8.67529 11.472 8.67529Z"
+                          />
+                          <path
+                            d="M3.8958 11.1606H3.10715C2.96376 11.1606 2.86816 11.2562 2.86816 11.3996V12.1644C2.86816 12.3078 2.96376 12.4034 3.10715 12.4034H3.8958C4.03919 12.4034 4.13479 12.3078 4.13479 12.1644V11.3996C4.13479 11.2562 4.03919 11.1606 3.8958 11.1606Z"
+                          />
+                          <path
+                            d="M6.429 11.1606H5.64035C5.49696 11.1606 5.40137 11.2562 5.40137 11.3996V12.1644C5.40137 12.3078 5.49696 12.4034 5.64035 12.4034H6.429C6.57239 12.4034 6.66799 12.3078 6.66799 12.1644V11.3996C6.66799 11.2562 6.5485 11.1606 6.429 11.1606Z"
+                          />
+                          <path
+                            d="M8.93779 11.1606H8.14914C8.00575 11.1606 7.91016 11.2562 7.91016 11.3996V12.1644C7.91016 12.3078 8.00575 12.4034 8.14914 12.4034H8.93779C9.08118 12.4034 9.17678 12.3078 9.17678 12.1644V11.3996C9.17678 11.2562 9.08118 11.1606 8.93779 11.1606Z"
+                          />
+                          <path
+                            d="M11.472 11.1606H10.6833C10.5399 11.1606 10.4443 11.2562 10.4443 11.3996V12.1644C10.4443 12.3078 10.5399 12.4034 10.6833 12.4034H11.472C11.6154 12.4034 11.711 12.3078 11.711 12.1644V11.3996C11.711 11.2562 11.5915 11.1606 11.472 11.1606Z"
+                          />
+                          <path
+                            d="M13.2637 3.3697H7.64754V2.58105C8.19721 2.43765 8.62738 1.91189 8.62738 1.31442C8.62738 0.597464 8.02992 0 7.28906 0C6.54821 0 5.95074 0.597464 5.95074 1.31442C5.95074 1.91189 6.35702 2.41376 6.93058 2.58105V3.3697H1.31442C0.597464 3.3697 0 3.96716 0 4.68412V13.2637C0 13.9807 0.597464 14.5781 1.31442 14.5781H13.2637C13.9807 14.5781 14.5781 13.9807 14.5781 13.2637V4.68412C14.5781 3.96716 13.9807 3.3697 13.2637 3.3697ZM6.6677 1.31442C6.6677 0.979841 6.93058 0.716957 7.28906 0.716957C7.62364 0.716957 7.91042 0.979841 7.91042 1.31442C7.91042 1.649 7.64754 1.91189 7.28906 1.91189C6.95448 1.91189 6.6677 1.6251 6.6677 1.31442ZM1.31442 4.08665H13.2637C13.5983 4.08665 13.8612 4.34954 13.8612 4.68412V6.45261H0.716957V4.68412C0.716957 4.34954 0.979841 4.08665 1.31442 4.08665ZM13.2637 13.8612H1.31442C0.979841 13.8612 0.716957 13.5983 0.716957 13.2637V7.16957H13.8612V13.2637C13.8612 13.5983 13.5983 13.8612 13.2637 13.8612Z"
+                          />
+                        </svg>
+                      </span>
+                    End Date : {formatDate(data.package_startDate)}
+                    </p>
+
+                  <div className="font-bold my-4 text-dark text-2xl sm:text-[26px] wow fadeInUp" data-wow-delay=".1s">
+                    Package Price: {data?.price} ৳
+                  </div>
+
+                  <div className="capitalize font-bold mt-2 text-dark text-xl sm:text-[18px] wow fadeInUp" data-wow-delay=".1s">
+                     Hotel Name : {data?.hotel_name}
+                  </div>
+
+                  <div className="capitalize font-bold my-2 text-dark text-xl sm:text-[18px] wow fadeInUp" data-wow-delay=".1s">
+                     Room Type : {data?.room_type}
+                  </div>
+
                   <div
-                    class="
+                    className="
                       bg-primary bg-opacity-5
                       rounded
                       overflow-hidden
@@ -382,13 +337,13 @@
                     data-wow-delay=".1s
                     "
                   >
-                    <div class="max-w-[530px] mx-auto">
-                      <span class="flex justify-center mb-6 text-primary">
+                    <div className="max-w-[530px] mx-auto">
+                      <span className="flex justify-center mb-6 text-primary">
                         <svg
                           width="44"
                           height="26"
                           viewBox="0 0 44 26"
-                          class="fill-current"
+                          className="fill-current"
                         >
                           <path
                             d="M10.1101 0.00124908C5.46698 -0.0701833 1.25247 2.92998 0.252417 7.00162C-0.319041 9.50175 0.180985 12.0019 1.68106 14.002C3.25258 16.145 5.68128 17.5022 8.39571 17.8593L10.8958 24.0025C11.1816 24.6454 11.8245 25.074 12.5388 25.074C13.2531 25.074 13.896 24.6454 14.1817 24.0025C14.6103 22.931 15.1103 21.7881 15.6104 20.7166C16.8247 18.0022 18.0391 15.2163 18.9677 12.359C19.9677 9.35889 19.5392 6.14443 17.8248 3.71573C16.1104 1.35846 13.396 0.0726814 10.1101 0.00124908ZM16.6104 11.6447C15.6818 14.3592 14.4675 17.145 13.3245 19.788C13.1102 20.3595 12.8245 20.8595 12.6102 21.431L10.1815 15.5735L9.39576 15.5021C7.10992 15.3592 4.96695 14.2163 3.7526 12.5733C2.68112 11.1447 2.32396 9.35889 2.75255 7.64451C3.46687 4.71579 6.53846 2.57281 10.0386 2.57281H10.1101C12.5388 2.57281 14.5389 3.57287 15.8247 5.28724C17.039 7.00162 17.3247 9.43032 16.6104 11.6447Z"
@@ -399,7 +354,7 @@
                         </svg>
                       </span>
                       <p
-                        class="
+                        className="
                           font-medium
                           text-dark text-base
                           italic
@@ -411,12 +366,12 @@
                         shall scatter the darkness of ignorance, and cause a
                         light heretofore unknown to shine amongst men.
                       </p>
-                      <span class="text-sm text-body-color italic">
+                      <span className="text-sm text-body-color italic">
                         “Andrio Domeco”
                       </span>
                     </div>
                     <div>
-                      <span class="absolute left-0 top-0">
+                      <span className="absolute left-0 top-0">
                         <svg
                           width="103"
                           height="109"
@@ -451,7 +406,7 @@
                           </defs>
                         </svg>
                       </span>
-                      <span class="absolute bottom-0 right-0">
+                      <span className="absolute bottom-0 right-0">
                         <svg
                           width="102"
                           height="106"
@@ -489,7 +444,7 @@
                   </div>
 
                   <h3
-                    class="
+                    className="
                       font-bold
                       mb-8
                       text-dark text-2xl
@@ -503,7 +458,7 @@
                   </h3>
 
                   <p
-                    class="
+                    className="
                       text-base text-body-color
                       leading-relaxed
                       mb-8
@@ -512,35 +467,14 @@
                     "
                     data-wow-delay=".1s"
                   >
-                    At quo cetero fastidii. Usu ex ornatus corpora sententiae,
-                    vocibus deleniti ut nec. Ut enim eripuit eligendi est, in
-                    iracundia signiferumque quo. Sed virtute suavitate
-                    suscipiantur ea, dolor this can eloquentiam ei pro. Suas
-                    adversarium interpretaris eu sit, eum viris impedit ne.
-                    Erant appareat corrumpit ei vel.
-                  </p>
-                  <p
-                    class="
-                      text-base text-body-color
-                      leading-relaxed
-                      mb-11
-                      wow
-                      fadeInUp
-                    "
-                    data-wow-delay=".1s"
-                  >
-                    At quo cetero fastidii. Usu ex ornatus corpora sententiae,
-                    vocibus deleniti ut nec. Ut enim eripuit eligendi est, in
-                    iracundia signiferumque quo. Sed virtute suavitate
-                    suscipiantur ea, dolor this can eloquentiam ei pro. Suas
-                    adversarium interpretaris eu sit, eum viris impedit ne.
-                    Erant appareat corrumpit ei vel.
+                  {data?.description}
                   </p>
 
-                  <div class="flex flex-wrap items-center -mx-4 mb-12">
-                    <div class="w-full md:w-1/2 px-4">
+
+                  <div className="flex flex-wrap items-center -mx-4 mb-12">
+                    <div className="w-full md:w-1/2 px-4">
                       <div
-                        class="
+                        className="
                           flex
                           items-center
                           flex-wrap
@@ -553,7 +487,7 @@
                       >
                         <a
                           href="javascript:void(0)"
-                          class="
+                          className="
                             block
                             py-2
                             px-5
@@ -574,7 +508,7 @@
                         </a>
                         <a
                           href="javascript:void(0)"
-                          class="
+                          className="
                             block
                             py-2
                             px-5
@@ -595,7 +529,7 @@
                         </a>
                         <a
                           href="javascript:void(0)"
-                          class="
+                          className="
                             block
                             py-2
                             px-5
@@ -612,16 +546,16 @@
                         </a>
                       </div>
                     </div>
-                    <div class="w-full md:w-1/2 px-4">
+                    <div className="w-full md:w-1/2 px-4">
                       <div
-                        class="flex items-center md:justify-end wow fadeInUp"
+                        className="flex items-center md:justify-end wow fadeInUp"
                         data-wow-delay=".1s"
                       >
-                        <span class="text-sm text-body-color font-medium mr-5">
+                        <span className="text-sm text-body-color font-medium mr-5">
                           Share This Post
                         </span>
-                        <div class="flex items-center">
-                          <a href="javascript:void(0)" class="mr-4 mb-2">
+                        <div className="flex items-center">
+                          <a href="javascript:void(0)" className="mr-4 mb-2">
                             <svg
                               width="32"
                               height="32"
@@ -639,7 +573,7 @@
                               />
                             </svg>
                           </a>
-                          <a href="javascript:void(0)" class="mr-4 mb-2">
+                          <a href="javascript:void(0)" className="mr-4 mb-2">
                             <svg
                               width="32"
                               height="33"
@@ -655,7 +589,7 @@
                               />
                             </svg>
                           </a>
-                          <a href="javascript:void(0)" class="mb-2">
+                          <a href="javascript:void(0)" className="mb-2">
                             <svg
                               width="33"
                               height="32"
@@ -677,10 +611,10 @@
                   </div>
                 </div>
               </div>
-              <div class="w-full lg:w-4/12 px-4">
+              <div className="w-full lg:w-4/12 px-4">
                 <div>
                   <div
-                    class="
+                    className="
                       mb-12
                       bg-primary
                       rounded
@@ -696,17 +630,17 @@
                     data-wow-delay=".1s
                     "
                   >
-                    <h3 class="font-semibold text-white mb-2 text-2xl">
+                    <h3 className="font-semibold text-white mb-2 text-2xl">
                       Join our newsletter!
                     </h3>
-                    <p class="text-base text-white mb-8">
+                    <p className="text-base text-white mb-8">
                       Enter your email to receive our latest newsletter.
                     </p>
                     <form>
                       <input
                         type="email"
                         placeholder="Your email address"
-                        class="
+                        className="
                           w-full
                           text-center
                           h-[50px]
@@ -726,7 +660,7 @@
                       <input
                         type="submit"
                         value="Subscribe Now"
-                        class="
+                        className="
                           w-full
                           text-center
                           h-[50px]
@@ -744,12 +678,12 @@
                         "
                       />
                     </form>
-                    <p class="text-sm font-medium text-white">
+                    <p className="text-sm font-medium text-white">
                       Don't worry, we don't spam
                     </p>
 
                     <div>
-                      <span class="absolute top-0 right-0">
+                      <span className="absolute top-0 right-0">
                         <svg
                           width="46"
                           height="46"
@@ -887,7 +821,7 @@
                           />
                         </svg>
                       </span>
-                      <span class="absolute bottom-0 left-0">
+                      <span className="absolute bottom-0 left-0">
                         <svg
                           width="46"
                           height="46"
@@ -1028,10 +962,10 @@
                     </div>
                   </div>
 
-                  <div class="flex flex-wrap -mx-4 mb-8">
-                    <div class="w-full px-4">
+                  <div className="flex flex-wrap -mx-4 mb-8">
+                    <div className="w-full px-4">
                       <h2
-                        class="
+                        className="
                           font-semibold
                           text-dark text-2xl
                           sm:text-[28px]
@@ -1046,13 +980,13 @@
                         Popular Articles
                       </h2>
                       <span
-                        class="h-[2px] bg-primary w-20 mb-10 inline-block"
+                        className="h-[2px] bg-primary w-20 mb-10 inline-block"
                       ></span>
                     </div>
 
-                    <div class="w-full md:w-1/2 lg:w-full px-4">
+                    <div className="w-full md:w-1/2 lg:w-full px-4">
                       <div
-                        class="
+                        className="
                           w-full
                           flex
                           items-center
@@ -1066,7 +1000,7 @@
                         "
                       >
                         <div
-                          class="
+                          className="
                             w-full
                             max-w-[80px]
                             h-20
@@ -1078,14 +1012,14 @@
                           <img
                             src="assets/images/blog/article-author-01.png"
                             alt="image"
-                            class="w-full"
+                            className="w-full"
                           />
                         </div>
-                        <div class="w-full">
+                        <div className="w-full">
                           <h4>
                             <a
                               href="javascript:void(0)"
-                              class="
+                              className="
                                 text-lg
                                 lg:text-base
                                 xl:text-lg
@@ -1100,13 +1034,13 @@
                               Create engaging online courses your student…
                             </a>
                           </h4>
-                          <p class="text-sm text-body-color">Glomiya Lucy</p>
+                          <p className="text-sm text-body-color">Glomiya Lucy</p>
                         </div>
                       </div>
                     </div>
-                    <div class="w-full md:w-1/2 lg:w-full px-4">
+                    <div className="w-full md:w-1/2 lg:w-full px-4">
                       <div
-                        class="
+                        className="
                           w-full
                           flex
                           items-center
@@ -1120,7 +1054,7 @@
                         "
                       >
                         <div
-                          class="
+                          className="
                             w-full
                             max-w-[80px]
                             h-20
@@ -1132,14 +1066,14 @@
                           <img
                             src="assets/images/blog/article-author-02.png"
                             alt="image"
-                            class="w-full"
+                            className="w-full"
                           />
                         </div>
-                        <div class="w-full">
+                        <div className="w-full">
                           <h4>
                             <a
                               href="javascript:void(0)"
-                              class="
+                              className="
                                 text-lg
                                 lg:text-base
                                 xl:text-lg
@@ -1154,13 +1088,13 @@
                               The ultimate formula for launching online course
                             </a>
                           </h4>
-                          <p class="text-sm text-body-color">Andrio jeson</p>
+                          <p className="text-sm text-body-color">Andrio jeson</p>
                         </div>
                       </div>
                     </div>
-                    <div class="w-full md:w-1/2 lg:w-full px-4">
+                    <div className="w-full md:w-1/2 lg:w-full px-4">
                       <div
-                        class="
+                        className="
                           w-full
                           flex
                           items-center
@@ -1174,7 +1108,7 @@
                         "
                       >
                         <div
-                          class="
+                          className="
                             w-full
                             max-w-[80px]
                             h-20
@@ -1186,14 +1120,14 @@
                           <img
                             src="assets/images/blog/article-author-03.png"
                             alt="image"
-                            class="w-full"
+                            className="w-full"
                           />
                         </div>
-                        <div class="w-full">
+                        <div className="w-full">
                           <h4>
                             <a
                               href="javascript:void(0)"
-                              class="
+                              className="
                                 text-lg
                                 lg:text-base
                                 xl:text-lg
@@ -1209,13 +1143,13 @@
                               you
                             </a>
                           </h4>
-                          <p class="text-sm text-body-color">Samoyel Dayno</p>
+                          <p className="text-sm text-body-color">Samoyel Dayno</p>
                         </div>
                       </div>
                     </div>
-                    <div class="w-full md:w-1/2 lg:w-full px-4">
+                    <div className="w-full md:w-1/2 lg:w-full px-4">
                       <div
-                        class="
+                        className="
                           w-full
                           flex
                           items-center
@@ -1231,7 +1165,7 @@
                         "
                       >
                         <div
-                          class="
+                          className="
                             w-full
                             max-w-[80px]
                             h-20
@@ -1243,14 +1177,14 @@
                           <img
                             src="assets/images/blog/article-author-04.png"
                             alt="image"
-                            class="w-full"
+                            className="w-full"
                           />
                         </div>
-                        <div class="w-full">
+                        <div className="w-full">
                           <h4>
                             <a
                               href="javascript:void(0)"
-                              class="
+                              className="
                                 text-lg
                                 lg:text-base
                                 xl:text-lg
@@ -1265,20 +1199,20 @@
                               The 8 best landing page builders, reviewed
                             </a>
                           </h4>
-                          <p class="text-sm text-body-color">Andrio Glori</p>
+                          <p className="text-sm text-body-color">Andrio Glori</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div
-                    class="rounded overflow-hidden mb-12 wow fadeInUp"
+                    className="rounded overflow-hidden mb-12 wow fadeInUp"
                     data-wow-delay=".1s"
                   >
                     <img
                       src="assets/images/blog/bannder-ad.png"
                       alt="image"
-                      class="w-full"
+                      className="w-full"
                     />
                   </div>
                 </div>
@@ -1287,10 +1221,10 @@
           </div>
         </div>
 
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full px-4 mt-14 wow fadeInUp" data-wow-delay=".2s">
+        <div className="flex flex-wrap -mx-4">
+          <div className="w-full px-4 mt-14 wow fadeInUp" data-wow-delay=".2s">
             <h2
-              class="
+              className="
                 font-semibold
                 text-dark text-2xl
                 sm:text-[28px]
@@ -1300,16 +1234,16 @@
             >
               Related Articles
             </h2>
-            <span class="h-[2px] bg-primary w-20 mb-10 inline-block"></span>
+            <span className="h-[2px] bg-primary w-20 mb-10 inline-block"></span>
           </div>
-          <div class="w-full md:w-1/2 lg:w-1/3 px-4">
-            <div class="mb-10 group wow fadeInUp" data-wow-delay=".1s">
-              <div class="rounded overflow-hidden mb-8">
-                <a href="blog-details.html" class="block">
+          <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div className="mb-10 group wow fadeInUp" data-wow-delay=".1s">
+              <div className="rounded overflow-hidden mb-8">
+                <a href="blog-details.html" className="block">
                   <img
                     src="assets/images/blog/blog-01.jpg"
                     alt="image"
-                    class="
+                    className="
                       w-full
                       transition
                       group-hover:scale-125 group-hover:rotate-6
@@ -1319,7 +1253,7 @@
               </div>
               <div>
                 <span
-                  class="
+                  className="
                     bg-primary
                     rounded
                     inline-block
@@ -1338,7 +1272,7 @@
                 <h3>
                   <a
                     href="blog-details.html"
-                    class="
+                    className="
                       font-semibold
                       text-xl
                       sm:text-2xl
@@ -1353,21 +1287,21 @@
                     Meet AutoManage, the best AI management tools
                   </a>
                 </h3>
-                <p class="text-base text-body-color">
+                <p className="text-base text-body-color">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/2 lg:w-1/3 px-4">
-            <div class="mb-10 group wow fadeInUp" data-wow-delay=".15s">
-              <div class="rounded overflow-hidden mb-8">
-                <a href="blog-details.html" class="block">
+          <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div className="mb-10 group wow fadeInUp" data-wow-delay=".15s">
+              <div className="rounded overflow-hidden mb-8">
+                <a href="blog-details.html" className="block">
                   <img
                     src="assets/images/blog/blog-02.jpg"
                     alt="image"
-                    class="
+                    className="
                       w-full
                       transition
                       group-hover:scale-125 group-hover:rotate-6
@@ -1377,7 +1311,7 @@
               </div>
               <div>
                 <span
-                  class="
+                  className="
                     bg-primary
                     rounded
                     inline-block
@@ -1396,7 +1330,7 @@
                 <h3>
                   <a
                     href="blog-details.html"
-                    class="
+                    className="
                       font-semibold
                       text-xl
                       sm:text-2xl
@@ -1411,21 +1345,21 @@
                     How to earn more money as a wellness coach
                   </a>
                 </h3>
-                <p class="text-base text-body-color">
+                <p className="text-base text-body-color">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/2 lg:w-1/3 px-4">
-            <div class="mb-10 group wow fadeInUp" data-wow-delay=".2s">
-              <div class="rounded overflow-hidden mb-8">
-                <a href="blog-details.html" class="block">
+          <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div className="mb-10 group wow fadeInUp" data-wow-delay=".2s">
+              <div className="rounded overflow-hidden mb-8">
+                <a href="blog-details.html" className="block">
                   <img
                     src="assets/images/blog/blog-03.jpg"
                     alt="image"
-                    class="
+                    className="
                       w-full
                       transition
                       group-hover:scale-125 group-hover:rotate-6
@@ -1435,7 +1369,7 @@
               </div>
               <div>
                 <span
-                  class="
+                  className="
                     bg-primary
                     rounded
                     inline-block
@@ -1454,7 +1388,7 @@
                 <h3>
                   <a
                     href="blog-details.html"
-                    class="
+                    className="
                       font-semibold
                       text-xl
                       sm:text-2xl
@@ -1469,7 +1403,7 @@
                     The no-fuss guide to upselling and cross selling
                   </a>
                 </h3>
-                <p class="text-base text-body-color">
+                <p className="text-base text-body-color">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
@@ -1479,6 +1413,8 @@
         </div>
       </div>
     </section>
-    <!-- ====== Blog Details Section End -->
+        </div>
+    );
+};
 
-   
+export default TourPackageDetailsCard;

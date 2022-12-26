@@ -12,12 +12,11 @@ export const tourPackageSlice = createApi({
       keepUnusedDataFor: 0,
       // providesTags: ["Todos"],
     }),
-    // // get filters sections detail
-    // getFiltersData: builder.query({
-    //   query: () => "/filters",
-    //   keepUnusedDataFor: 0,
-    //   providesTags: ["Filters"],
-    // }),
+    // get filters sections detail
+    getTourPackageDetails: builder.query({
+      query: (id) => `/tour-package/details/${id}`,
+      keepUnusedDataFor: 0,
+    }),
     // // set status on filters section
     // updateFilterStatus: builder.mutation({
     //   query: (data) => ({
@@ -112,5 +111,6 @@ export const tourPackageSlice = createApi({
 });
 
 export const {
-useGetTourPackageQuery
+useGetTourPackageQuery,
+useGetTourPackageDetailsQuery
 } = tourPackageSlice;
