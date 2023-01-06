@@ -8,6 +8,8 @@ import NavBar from "./Page/NavBar/NavBar";
 import Home from "./Page/Home/Home";
 import SingIn from "./Page/SingIn/SingIn";
 import { ToastContainer, toast } from 'react-toastify';
+import BookingCard from "./Page/BookingCard/BookingCard";
+import BookingCardParent from "./Page/BookingCard/BookingCardParent";
 
 function App() {
 
@@ -48,10 +50,12 @@ function App() {
       <NavBar />
       <ToastContainer />
       <BrowserRouter>
+
+
         <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/singin" element={<SingIn />} />
-      
+          <Route path="/" element={<Home />} />
+          <Route path="/singin" element={<SingIn />} />
+
           {/********************** Tour Package Start ***********************/}
           <Route
             exact
@@ -63,7 +67,24 @@ function App() {
           </Route>
           {/********************** Tour Package End ***********************/}
 
+          <Route
+            exact
+            path="/booking-cart"
+            element={<BookingCardParent />}
+          >
+            <Route index element={<BookingCard />} />
+            {/* <Route path="details/:tourPackageId" element={<TourPackageDetails />} /> */}
+          </Route>
+
         </Routes>
+
+
+
+
+
+
+
+
       </BrowserRouter>
       <Footer />
     </div>
