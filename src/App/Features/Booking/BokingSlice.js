@@ -21,9 +21,21 @@ export const BookingSlice = createApi({
       keepUnusedDataFor: 0,
     }),
 
+
+    addBooking: builder.mutation({
+      query: (data) => ({
+        url: `/booking/add`,
+        method: "POST",
+        body: data,
+      }),
+      keepUnusedDataFor: 0,
+      
+    }),
+
   }),
 });
 
 export const {
-useGetBookingQuery
+useGetBookingQuery,
+useAddBookingMutation
 } = BookingSlice;
