@@ -6,6 +6,8 @@ const BookingCard = () => {
 
     const {data, isLoading, isError}=useGetBookingQuery();
 
+    console.log("data",data)
+
     let content = null;
     if (isLoading) {
       content = <div>Loading...</div>;
