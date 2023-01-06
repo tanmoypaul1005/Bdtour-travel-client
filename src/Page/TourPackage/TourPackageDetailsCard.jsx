@@ -1,8 +1,11 @@
 import React from 'react';
+import CommonButton from '../../Components/CommonButton/CommonButton';
 import { formatDate } from '../../Utility/UtilityFunctions';
 
 const TourPackageDetailsCard = ({ data }) => {
+
   console.log("data", data)
+
   return (
     <div>
       <div className="
@@ -11,30 +14,10 @@ const TourPackageDetailsCard = ({ data }) => {
       >
         <div>
           <span className="absolute top-0 left-0 z-[-1]">
-            <svg
-              width="495"
-              height="470"
-              viewBox="0 0 495 470"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="55"
-                cy="442"
-                r="138"
-                stroke="white"
-                stroke-opacity="0.04"
-                stroke-width="50"
-              />
-              <circle
-                cx="446"
-                r="39"
-                stroke="white"
-                stroke-opacity="0.04"
-                stroke-width="20"
-              />
-              <path
-                d="M245.406 137.609L233.985 94.9852L276.609 106.406L245.406 137.609Z"
+            <svg width="495" height="470" viewBox="0 0 495 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="55" cy="442" r="138" stroke="white" stroke-opacity="0.04" stroke-width="50" />
+              <circle cx="446" r="39" stroke="white" stroke-opacity="0.04" stroke-width="20" />
+              <path d="M245.406 137.609L233.985 94.9852L276.609 106.406L245.406 137.609Z"
                 stroke="white"
                 stroke-opacity="0.08"
                 stroke-width="12"
@@ -42,33 +25,10 @@ const TourPackageDetailsCard = ({ data }) => {
             </svg>
           </span>
           <span className="absolute top-0 right-0 z-[-1]">
-            <svg
-              width="493"
-              height="470"
-              viewBox="0 0 493 470"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="462"
-                cy="5"
-                r="138"
-                stroke="white"
-                stroke-opacity="0.04"
-                stroke-width="50"
-              />
-              <circle
-                cx="49"
-                cy="470"
-                r="39"
-                stroke="white"
-                stroke-opacity="0.04"
-                stroke-width="20"
-              />
-              <path
-                d="M222.393 226.701L272.808 213.192L259.299 263.607L222.393 226.701Z"
-                stroke="white"
-                stroke-opacity="0.06"
+            <svg width="493" height="470" viewBox="0 0 493 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="462" cy="5" r="138" stroke="white" stroke-opacity="0.04" stroke-width="50" />
+              <circle cx="49" cy="470" r="39" stroke="white" stroke-opacity="0.04" stroke-width="20" />
+              <path d="M222.393 226.701L272.808 213.192L259.299 263.607L222.393 226.701Z" stroke="white" stroke-opacity="0.06"
                 stroke-width="13"
               />
             </svg>
@@ -83,18 +43,7 @@ const TourPackageDetailsCard = ({ data }) => {
           <div className="flex flex-wrap justify-center -mx-4">
             <div className="w-full px-4">
               <div
-                className="
-                relative
-                rounded
-                overflow-hidden
-                z-20
-                mb-[60px]
-                h-[300px]
-                md:h-[400px]
-                lg:h-[500px]
-                wow
-                fadeInUp
-              "
+                className="relative rounded overflow-hidden z-20 mb-[60px] h-[300px] md:h-[400px] lg:h-[500px] wow fadeInUp"
                 data-wow-delay=".1s
               "
               >
@@ -103,20 +52,7 @@ const TourPackageDetailsCard = ({ data }) => {
                   alt=""
                   className="w-full h-full object-cover object-center"
                 />
-                <div
-                  className="
-                  absolute
-                  w-full
-                  h-full
-                  top-0
-                  left-0
-                  flex
-                  items-end
-                  z-10
-                  bg-gradient-to-t
-                  from-dark-700
-                  to-transparent
-                "
+                <div className="absolute w-full h-full top-0 left-0 flex items-end z-10 bg-gradient-to-t from-dark-700 to-transparent"
                 >
                   <div className="flex flex-wrap items-center p-4 sm:p-8 pb-4">
                     <div className="flex items-center mb-4 mr-5 md:mr-10">
@@ -207,11 +143,7 @@ const TourPackageDetailsCard = ({ data }) => {
                 <div className="w-full lg:w-8/12 px-4">
                   <div>
                     <h2
-                      className="
-                      font-bold
-                      text-dark text-[26px]
-                      sm:text-3xl
-                      md:text-4xl
+                      className="font-bold text-dark text-[26px] sm:text-3xl md:text-4xl
                       leading-snug
                       sm:leading-snug
                       md:leading-snug
@@ -225,13 +157,7 @@ const TourPackageDetailsCard = ({ data }) => {
                       {data?.title}
                     </h2>
                     <p
-                      className="
-                      text-base text-body-color
-                      leading-relaxed
-                      mb-8
-                      wow
-                      fadeInUp
-                      capitalize
+                      className=" text-base text-body-color leading-relaxed mb-8 wow adeInUp capitalize
                     "
                       data-wow-delay=".1s"
                     >
@@ -318,82 +244,85 @@ const TourPackageDetailsCard = ({ data }) => {
                       Room Type : {data?.room_type}
                     </div>
 
-                    <p
-                      className="
-                      text-base text-body-color
-                      leading-relaxed
-                      mb-8
-                      wow
-                      fadeInUp
-                    "
-                      data-wow-delay=".1s"
-                    >
+                    <p className="text-base text-body-color leading-relaxed mb-8 wow fadeInUp" data-wow-delay=".1s">
                       {data?.description}
                     </p>
                   </div>
-                  <form class="w-full max-w-lg">
-                    <div class="flex flex-wrap -mx-3 mb-6">
-                      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                          First Name
+
+
+
+                  <form className="w-full">
+                    <div className="flex flex-wrap -mx-3  mb-6">
+                      <div className="w-full md:w-1/2 px-3">
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                          Full Name
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border
-                         border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" 
-                         id="grid-first-name" type="text" placeholder="Jane"/>
-                          <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-                      </div>
-                      <div class="w-full md:w-1/2 px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                          Last Name
-                        </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border
+                        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border
                          border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white
-                          focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"/>
+                          focus:border-gray-500" id="grid-last-name" type="text" placeholder="Enter Your Name" />
                       </div>
+
+                      <div className="w-full md:w-1/2 px-3">
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                          Email
+                        </label>
+                        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border
+                         border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white
+                          focus:border-gray-500" id="grid-last-name" type="email" placeholder="Enter Your Email" />
+                      </div>
+
                     </div>
-                    <div class="flex flex-wrap -mx-3 mb-6">
-                      <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                    <div className="flex flex-wrap -mx-3 mb-6">
+                      <div className="w-full px-3">
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                           Password
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border
+                        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border
                          border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white
-                          focus:border-gray-500" id="grid-password" type="password" placeholder="******************"/>
-                          <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
+                          focus:border-gray-500" id="grid-password" type="password" placeholder="******************" />
                       </div>
                     </div>
-                    <div class="flex flex-wrap -mx-3 mb-2">
-                      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-                          City
+                    <div className="flex flex-wrap -mx-3 mb-2">
+                      <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                          Phone Number
                         </label>
-                        <input class="appearance-none 
+                        <input className="appearance-none 
                         block w-full bg-gray-200 text-gray-700 border
                          border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none
-                          focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque"/>
+                          focus:bg-white focus:border-gray-500" id="grid-city" type="tel" placeholder="Phone Number" />
                       </div>
-                      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-                          State
+
+
+                      <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                          Room Type
                         </label>
-                        <div class="relative">
-                          <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                            <option>New Mexico</option>
-                            <option>Missouri</option>
-                            <option>Texas</option>
+                        <div className="relative">
+                          <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                            <option>Ac</option>
+                            <option>Non Ac</option>
+
                           </select>
-                          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
                           </div>
                         </div>
                       </div>
-                      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                          Zip
+                      <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                          Place
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210"/>
+                        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210" />
                       </div>
                     </div>
+
+
+                    <div className="mt-[20px] flex justify-center">
+                      <CommonButton 
+                      btnLabel="Save"
+                      />
+                      </div>
                   </form>
                 </div>
 
@@ -798,14 +727,14 @@ const TourPackageDetailsCard = ({ data }) => {
                           >
                             <img
                               src="assets/images/blog/article-author-01.png"
-                              alt="image"
+                              alt=""
                               className="w-full"
                             />
                           </div>
                           <div className="w-full">
                             <h4>
-                              <a
-                                href="javascript:void(0)"
+                              <div
+
                                 className="
                                 text-lg
                                 lg:text-base
@@ -819,7 +748,7 @@ const TourPackageDetailsCard = ({ data }) => {
                               "
                               >
                                 Create engaging online courses your student…
-                              </a>
+                              </div>
                             </h4>
                             <p className="text-sm text-body-color">Glomiya Lucy</p>
                           </div>
@@ -911,7 +840,7 @@ const TourPackageDetailsCard = ({ data }) => {
                           <div className="w-full">
                             <h4>
                               <div
-                             
+
                                 className="
                                 text-lg
                                 lg:text-base
@@ -968,7 +897,7 @@ const TourPackageDetailsCard = ({ data }) => {
                           <div className="w-full">
                             <h4>
                               <div
-                               
+
                                 className="
                                 text-lg
                                 lg:text-base
@@ -1027,7 +956,7 @@ const TourPackageDetailsCard = ({ data }) => {
                   <a href="blog-details.html" className="block">
                     <img
                       src="assets/images/blog/blog-01.jpg"
-                      alt="image"
+                      alt=""
                       className="
                       w-full
                       transition
@@ -1085,7 +1014,7 @@ const TourPackageDetailsCard = ({ data }) => {
                   <a href="blog-details.html" className="block">
                     <img
                       src="assets/images/blog/blog-02.jpg"
-                      alt="image"
+                      alt=""
                       className="
                       w-full
                       transition
@@ -1143,7 +1072,7 @@ const TourPackageDetailsCard = ({ data }) => {
                   <a href="blog-details.html" className="block">
                     <img
                       src="assets/images/blog/blog-03.jpg"
-                      alt="image"
+                      alt=""
                       className="
                       w-full
                       transition
