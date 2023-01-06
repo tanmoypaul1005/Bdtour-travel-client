@@ -1,10 +1,13 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+
 export const tourPackageSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5000/api",
   }),
+
   tagTypes: ["Todos", "Filters"],
+  
   endpoints: (builder) => ({
     // get TourPackage
     getTourPackage: builder.query({
