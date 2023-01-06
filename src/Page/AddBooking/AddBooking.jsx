@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router';
 import { useAddBookingMutation } from '../../App/Features/Booking/BokingSlice';
 import CommonButton from '../../Components/CommonButton/CommonButton';
+import { Toaster, ToasterLoading } from '../../Utility/UtilityFunctions';
 
 const AddBooking = () => {
 
@@ -9,19 +10,35 @@ const AddBooking = () => {
 
     const {tourPackageId}=useParams();
 
-
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
     const [address, setAddress] = useState("")
+    const [room_type, setRoom_Type] = useState("")
 
 
     const submitBookingData = (e) => {
+        console.log("vv",isLoading, isError, isSuccess)
         e.preventDefault();
+        const body ={name,address,phone,email,tourPackageId,room_type}
+        addBooking(body)
 
-        const body ={name,address,phone,email,tourPackageId}
-        addBooking()
-        console.log("body",body)
+        // if(isSuccess){
+        //     Toaster({ message: "Add Booking", type: "success" });
+        // }
+
+        // if (isLoading) {
+        //     ToasterLoading({ message: "Add Booking Process Start" });
+        //   }
+          if ( isError) {
+            Toaster({ message: "An error occurred!", type: "error" });
+          }
+        
+          if (!isLoading && !isError) {
+            Toaster({ message: "Add Booking", type: "success" });
+          }
+
+         console.log("body",body)
     }
 
     return (
@@ -99,9 +116,16 @@ const AddBooking = () => {
                             Room Type
                         </label>
                         <div className="relative">
-                            <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                                <option>Ac</option>
-                                <option>Non Ac</option>
+                            <select
+                             required
+                             defaultValue={room_type}
+                             onChange={
+                                (e)=>{setRoom_Type(e.target.value)
+                                    console.log("e",e.target.value)
+                                }} 
+                             className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                                <option value="Ac">Ac</option>
+                                <option Value="Non Ac">Non Ac</option>
 
                             </select>
                             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
