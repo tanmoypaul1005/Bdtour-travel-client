@@ -14,7 +14,7 @@ const AddBooking = () => {
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
     const [address, setAddress] = useState("")
-    const [room_type, setRoom_type] = useState("")
+    const [room_type, setRoom_Type] = useState("")
 
 
     const submitBookingData = (e) => {
@@ -119,7 +119,10 @@ const AddBooking = () => {
                             <select
                              required
                              defaultValue={room_type}
-                             onChange={(e)=>{setRoom_type(e.target.value)}} 
+                             onChange={
+                                (e)=>{setRoom_Type(e.target.value)
+                                    console.log("e",e.target.value)
+                                }} 
                              className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                                 <option value="Ac">Ac</option>
                                 <option Value="Non Ac">Non Ac</option>
