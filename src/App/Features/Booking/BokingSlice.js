@@ -1,4 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { Toaster } from "../../../Utility/UtilityFunctions";
+import { ToastContainer, toast } from 'react-toastify';
 
 export const BookingSlice = createApi({
   reducerPath: "api",
@@ -28,8 +30,15 @@ export const BookingSlice = createApi({
         method: "POST",
         body: data,
       }),
+      transformResponse: (response, meta, arg) =>
+      { 
+        if(response){
+          toast.success("Add Booking successful");
+        }else{
+          toast.error("An error occurred!");
+        }
+      },
       keepUnusedDataFor: 0,
-      
     }),
 
   }),

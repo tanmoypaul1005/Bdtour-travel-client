@@ -6,39 +6,24 @@ import { Toaster, ToasterLoading } from '../../Utility/UtilityFunctions';
 
 const AddBooking = () => {
 
-    const [addBooking, { isLoading, isError, isSuccess }] = useAddBookingMutation();
+    const [addBooking,result] = useAddBookingMutation();
 
-    const {tourPackageId}=useParams();
+    const { tourPackageId } = useParams();
 
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
     const [address, setAddress] = useState("")
-    const [room_type, setRoom_Type] = useState("")
+    const [room_type, setRoom_Type] = useState("Ac")
 
 
     const submitBookingData = (e) => {
-        console.log("vv",isLoading, isError, isSuccess)
+
         e.preventDefault();
-        const body ={name,address,phone,email,tourPackageId,room_type}
+
+        const body = { name, address, phone, email, tourPackageId, room_type }
+
         addBooking(body)
-
-        // if(isSuccess){
-        //     Toaster({ message: "Add Booking", type: "success" });
-        // }
-
-        // if (isLoading) {
-        //     ToasterLoading({ message: "Add Booking Process Start" });
-        //   }
-          if ( isError) {
-            Toaster({ message: "An error occurred!", type: "error" });
-          }
-        
-          if (!isLoading && !isError) {
-            Toaster({ message: "Add Booking", type: "success" });
-          }
-
-         console.log("body",body)
     }
 
     return (
@@ -51,8 +36,8 @@ const AddBooking = () => {
                             Full Name
                         </label>
                         <input
-                        value={name}
-                        onChange={(e)=>{setName(e.target.value)}}
+                            value={name}
+                            onChange={(e) => { setName(e.target.value) }}
                             required
                             className="appearance-none block w-full bg-gray-200 text-gray-700 border
                          border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white
@@ -66,29 +51,29 @@ const AddBooking = () => {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                             Email
                         </label>
-                        <input 
-                        value={email}
-                        onChange={(e)=>{setEmail(e.target.value)}}
-                        required 
-                        className="appearance-none block w-full bg-gray-200 text-gray-700 border
+                        <input
+                            value={email}
+                            onChange={(e) => { setEmail(e.target.value) }}
+                            required
+                            className="appearance-none block w-full bg-gray-200 text-gray-700 border
                          border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white
-                          focus:border-gray-500" 
-                          id="grid-last-name"
-                           type="email" placeholder="Enter Your Email"
-                            />
+                          focus:border-gray-500"
+                            id="grid-last-name"
+                            type="email" placeholder="Enter Your Email"
+                        />
                     </div>
 
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                           Address
+                            Address
                         </label>
-                        <input 
-                        required
-                        value={address}
-                        onChange={(e)=>{setAddress(e.target.value)}}
-                        className="appearance-none block w-full bg-gray-200 text-gray-700 border
+                        <input
+                            required
+                            value={address}
+                            onChange={(e) => { setAddress(e.target.value) }}
+                            className="appearance-none block w-full bg-gray-200 text-gray-700 border
                       border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white
                           focus:border-gray-500" id="grid-password" type="address" placeholder="Enter Your Address" />
                     </div>
@@ -100,11 +85,11 @@ const AddBooking = () => {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                             Phone Number
                         </label>
-                        <input 
-                        value={phone}
-                        onChange={(e)=>{setPhone(e.target.value)}}
-                        required 
-                        className="appearance-none 
+                        <input
+                            value={phone}
+                            onChange={(e) => { setPhone(e.target.value) }}
+                            required
+                            className="appearance-none 
                         block w-full bg-gray-200 text-gray-700 border
                          border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none
                           focus:bg-white focus:border-gray-500" id="grid-city" type="tel" placeholder="Phone Number" />
@@ -117,13 +102,14 @@ const AddBooking = () => {
                         </label>
                         <div className="relative">
                             <select
-                             required
-                             defaultValue={room_type}
-                             onChange={
-                                (e)=>{setRoom_Type(e.target.value)
-                                    console.log("e",e.target.value)
-                                }} 
-                             className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                                required
+                                defaultValue={room_type}
+                                onChange={
+                                    (e) => {
+                                        setRoom_Type(e.target.value)
+                                        console.log("e", e.target.value)
+                                    }}
+                                className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                                 <option value="Ac">Ac</option>
                                 <option Value="Non Ac">Non Ac</option>
 

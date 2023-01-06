@@ -20,7 +20,7 @@ export const Toaster = (msg, type = 'error') => {
 }
 
 
-export const ToastrLoading = (msg = "Please wait...", action = 'start', type = 'success', the_toastr) => {
+export const ToasterLoading = (msg = "Please wait...", action = 'start', type = 'success', the_toastr) => {
     const options = {
         position: "bottom-right",
         autoClose: 2000,
