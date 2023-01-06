@@ -49,10 +49,10 @@ const NavBar = () => {
                     </a>
 
                     <a
-                      href="/"
+                      href="/blog"
                       className="text-gray-300 hover:bg-[#2257AA] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
-                      Calendar
+                      Blog
                     </a>
 
                     <a
@@ -63,10 +63,10 @@ const NavBar = () => {
                     </a>
 
                     <a
-                      href="/singup"
+                      href="/singin"
                       className="text-gray-300 hover:bg-[#2257AA] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
-                     SingUp
+                     SingIn
                     </a>
                   </div>
                 </div>
@@ -151,10 +151,10 @@ const NavBar = () => {
                   </a>
 
                   <a
-                    href="/"
+                    href="/blog"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Calendar
+                    Blog
                   </a>
 
                   <a
@@ -163,6 +163,15 @@ const NavBar = () => {
                   >
                     Booking Cart
                   </a>
+
+                  
+                  <a
+                    href="/singin"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >
+                    SingIn
+                  </a>
+
                 </div>
               </div>
             )}
