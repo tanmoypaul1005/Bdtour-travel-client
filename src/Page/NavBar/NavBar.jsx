@@ -151,10 +151,10 @@ const NavBar = () => {
                   </a>
 
                   <a
-                    href="/"
+                    href="/booking-cart"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Reports
+                    Booking Cart
                   </a>
                 </div>
               </div>
