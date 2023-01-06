@@ -163,7 +163,6 @@ const NavBar = () => {
                   >
                     Booking Cart
                   </a>
-
                   
                   <a
                     href="/singin"
