@@ -7,6 +7,8 @@ import TourPackageDetails from "./Page/TourPackage/TourPackageDetails";
 import NavBar from "./Page/NavBar/NavBar";
 import Home from "./Page/Home/Home";
 import SingIn from "./Page/SingIn/SingIn";
+import { ToastContainer, toast } from 'react-toastify';
+
 function App() {
 
 
@@ -44,7 +46,7 @@ function App() {
         <input type="submit" value="Submit" />
       </form> */}
       <NavBar />
-      
+      <ToastContainer />
       <BrowserRouter>
         <Routes>
         <Route path="/" element={<Home />} />
