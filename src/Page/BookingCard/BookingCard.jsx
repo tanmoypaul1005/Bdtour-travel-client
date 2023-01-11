@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useGetBookingQuery } from '../../App/Features/Booking/BokingSlice';
+import { useGetBookingQuery } from '../../App/Features/Booking/BookingSlice';
 
 const BookingCard = () => {
 

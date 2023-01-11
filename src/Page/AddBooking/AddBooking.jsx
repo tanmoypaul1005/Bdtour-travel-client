@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router';
-import { useAddBookingMutation } from '../../App/Features/Booking/BokingSlice';
+import { useAddBookingMutation } from '../../App/Features/Booking/BookingSlice';
 import CommonButton from '../../Components/CommonButton/CommonButton';
 import { Toaster, ToasterLoading } from '../../Utility/UtilityFunctions';
 
