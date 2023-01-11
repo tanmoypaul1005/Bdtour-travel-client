@@ -1,6 +1,7 @@
 import React from 'react';
 
-const BlogCard = () => {
+const BlogCard = ({data}) => {
+    console.log("content",data)
     return (
         <div>
             <div className="max-w-sm w-full lg:max-w-full lg:flex">

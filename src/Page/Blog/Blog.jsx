@@ -9,6 +9,8 @@ const Blog = () => {
 
     const { data, isLoading, isError } = useGetBlogQuery();
 
+    console.log("data",data)
+
     let content = null;
 
     if (isLoading) {
