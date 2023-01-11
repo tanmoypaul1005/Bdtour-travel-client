@@ -9,11 +9,14 @@ const Blog = () => {
 
     const { data, isLoading, isError } = useGetBlogQuery();
 
+    // console.log("data",data)
+
     let content = null;
 
     if (isLoading) {
         content = <TourPackageCardShimmer />
     }
+
 
     if(!isLoading && isError){
         content = <Error message="There was an error" />;
