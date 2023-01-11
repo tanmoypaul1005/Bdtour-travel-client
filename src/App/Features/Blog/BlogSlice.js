@@ -44,4 +44,5 @@ export const BlogSlice = createApi({
 
 export const {
 useGetBlogQuery,
+useAddBlogMutation
 } = BlogSlice;
