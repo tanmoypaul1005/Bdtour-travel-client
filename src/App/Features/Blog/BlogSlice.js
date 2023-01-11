@@ -12,7 +12,7 @@ export const BlogSlice = createApi({
   endpoints: (builder) => ({
     // get TourPackage
     getBooking: builder.query({
-      query: () => "/booking/get",
+      query: () => "/blog/get",
       keepUnusedDataFor: 0,
       // providesTags: ["Todos"],
     }),
