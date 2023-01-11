@@ -4,7 +4,8 @@ import BlogCard from './BlogCard';
 
 const Blog = () => {
 
-    const {}=useGetBlogQuery()
+    const {data, isLoading, isError}=useGetBlogQuery();
+    
     return (
         <div>
             <BlogCard/>
