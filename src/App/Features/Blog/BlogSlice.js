@@ -17,7 +17,7 @@ export const BlogSlice = createApi({
     }),
     // get filters sections detail
     getTourPackageDetails: builder.query({
-      query: (id) => `/tour-package/details/${id}`,
+      query: (id) => `/blog/details/${id}`,
       keepUnusedDataFor: 0,
     }),
 
