@@ -50,7 +50,8 @@ const NavBar = () => {
 
                     <a
                       href="/blog"
-                      className="text-gray-300 hover:bg-[#2257AA] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                      className={`hover:bg-[#2257AA] text-white px-3 py-2 rounded-md text-sm font-medium
+                    ${window.location.pathname === '/blog' && 'bg-[#2257AA] text-white'}`}
                     >
                       Blog
                     </a>
@@ -132,7 +133,8 @@ const NavBar = () => {
                 <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                   <a
                     href="/"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className=
+                    "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
                     Home
                   </a>
