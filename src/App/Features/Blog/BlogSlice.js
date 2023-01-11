@@ -10,8 +10,7 @@ export const BlogSlice = createApi({
   tagTypes: ["Todos", "Filters"],
   
   endpoints: (builder) => ({
-    // get TourPackage
-    getBooking: builder.query({
+    getBlog: builder.query({
       query: () => "/blog/get",
       keepUnusedDataFor: 0,
       // providesTags: ["Todos"],
@@ -23,9 +22,9 @@ export const BlogSlice = createApi({
     }),
 
 
-    addBooking: builder.mutation({
+    addBlog: builder.mutation({
       query: (data) => ({
-        url: `/booking/add`,
+        url: `/blog/add`,
         method: "POST",
         body: data,
       }),
@@ -44,5 +43,5 @@ export const BlogSlice = createApi({
 });
 
 export const {
-
+useGetBlogQuery,
 } = BlogSlice;
