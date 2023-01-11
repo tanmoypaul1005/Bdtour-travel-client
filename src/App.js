@@ -83,7 +83,7 @@ function App() {
 
           <Route
             exact
-            path="/booking-cart"
+            path="/blog"
             element={<BlogParent />}
           >
             <Route index element={<Blog />} />
