@@ -1,4 +1,4 @@
-import { Error } from '@material-ui/icons';
+
 import React from 'react';
 import { useGetBookingQuery } from '../../App/Features/Booking/BokingSlice';
 
@@ -13,7 +13,7 @@ const BookingCard = () => {
       content = <div>Loading...</div>;
     }
     if (!isLoading && isError) {
-      content = <Error message="There was an error" />;
+      content = "There was an error";
     }
   
     if (!isLoading && !isError && data?.data) {
