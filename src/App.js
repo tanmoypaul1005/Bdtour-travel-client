@@ -10,6 +10,8 @@ import SingIn from "./Page/SingIn/SingIn";
 import { ToastContainer, toast } from 'react-toastify';
 import BookingCard from "./Page/BookingCard/BookingCard";
 import BookingCardParent from "./Page/BookingCard/BookingCardParent";
+import Blog from "./Page/Blog/Blog";
+import BlogParent from "./Page/Blog/BlogParent";
 
 function App() {
 
@@ -67,12 +69,24 @@ function App() {
           </Route>
           {/********************** Tour Package End ***********************/}
 
+
+
           <Route
             exact
             path="/booking-cart"
             element={<BookingCardParent />}
           >
             <Route index element={<BookingCard />} />
+            {/* <Route path="details/:tourPackageId" element={<TourPackageDetails />} /> */}
+          </Route>
+
+
+          <Route
+            exact
+            path="/booking-cart"
+            element={<BlogParent />}
+          >
+            <Route index element={<Blog />} />
             {/* <Route path="details/:tourPackageId" element={<TourPackageDetails />} /> */}
           </Route>
 
