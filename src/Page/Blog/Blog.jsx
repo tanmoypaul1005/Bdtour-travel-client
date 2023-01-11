@@ -17,6 +17,7 @@ const Blog = () => {
         content = <TourPackageCardShimmer />
     }
 
+    
     if(!isLoading && isError){
         content = <Error message="There was an error" />;
     }
