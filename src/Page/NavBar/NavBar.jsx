@@ -41,6 +41,7 @@ const NavBar = () => {
                       Tour Package
                     </a>
 
+
                     <a
                       href="/"
                       className="text-gray-300 hover:bg-[#2257AA] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
