@@ -9,7 +9,7 @@ const Blog = () => {
 
     const { data, isLoading, isError } = useGetBlogQuery();
 
-    console.log("data",data)
+    // console.log("data",data)
 
     let content = null;
 
