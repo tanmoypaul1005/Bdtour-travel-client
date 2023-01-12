@@ -14,8 +14,6 @@ import Blog from "./Page/Blog/Blog";
 import BlogParent from "./Page/Blog/BlogParent";
 
 function App() {
-
-
   // const submit = (e) => {
   //   e.preventDefault();
   //   const image = e.target.image.files[0];
