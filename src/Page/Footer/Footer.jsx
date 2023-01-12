@@ -209,7 +209,7 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            
+
             <div className="w-full sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12 px-4">
               <div className="w-full mb-10">
                 <h4 className="text-white text-lg font-semibold mb-9">
@@ -231,6 +231,7 @@ function Footer() {
                     </a>
                   </li>
                   <li>
+                    
                     <a
                       href="javascript:void(0)"
                       className="
