@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div>
-      
+
       {/* <form onSubmit={submit}>
         <input
           className=""
@@ -78,7 +78,6 @@ function App() {
             <Route index element={<BookingCard />} />
             {/* <Route path="details/:tourPackageId" element={<TourPackageDetails />} /> */}
           </Route>
-
 
           <Route
             exact
