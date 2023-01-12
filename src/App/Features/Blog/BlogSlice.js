@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 export const BlogSlice = createApi({
   reducerPath: "api",
@@ -7,19 +7,20 @@ export const BlogSlice = createApi({
     baseUrl: "http://localhost:5000/api",
   }),
 
-  tagTypes: ["Todos", "Filters"],
+  tagTypes: [],
   
   endpoints: (builder) => ({
     getBlog: builder.query({
       query: () => "/blog/get",
       keepUnusedDataFor: 0,
-      // providesTags: ["Todos"],
+      // providesTags: [],
     }),
-    // get filters sections detail
-    getTourPackageDetails: builder.query({
-      query: (id) => `/blog/details/${id}`,
-      keepUnusedDataFor: 0,
-    }),
+    
+
+    // getTourPackageDetails: builder.query({
+    //   query: (id) => `/blog/details/${id}`,
+    //   keepUnusedDataFor: 0,
+    // }),
 
 
     addBlog: builder.mutation({
