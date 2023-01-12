@@ -8,19 +8,19 @@ const Home = () => {
 
             {/* <!-- ====== Faq Section Start --> */}
             <section
-                class="bg-[#f3f4ff] pt-5 lg:pt-[20px] pb-12 lg:pb-[90px] relative z-20 overflow-hidden">
-                <div class="container">
-                    <div class="flex flex-wrap -mx-4">
-                        <div class="w-full px-4">
-                            <div class="text-center mx-auto mb-[60px] lg:mb-5 max-w-[620px]">
-                                <span class="font-semibold text-lg text-primary mb-2 block">
+                className="bg-[#f3f4ff] pt-5 lg:pt-[20px] pb-12 lg:pb-[90px] relative z-20 overflow-hidden">
+                <div className="container">
+                    <div className="flex flex-wrap -mx-4">
+                        <div className="w-full px-4">
+                            <div className="text-center mx-auto mb-[60px] lg:mb-5 max-w-[620px]">
+                                <span className="block mb-2 text-lg font-semibold text-primary">
                                     FAQ
                                 </span>
                                 <h2
-                                    class="font-bold text-3xl sm:text-4xl md:text-[42px] text-dark mb-4">
+                                    className="font-bold text-3xl sm:text-4xl md:text-[42px] text-dark mb-4">
                                     Any Questions? Answered
                                 </h2>
-                                <p class="text-lg sm:text-xl leading-relaxed sm:leading-relaxed text-body-color">
+                                <p className="text-lg leading-relaxed sm:text-xl sm:leading-relaxed text-body-color">
                                     There are many variations of passages of Lorem Ipsum available
                                     but the majority have suffered alteration in some form.
                                 </p>
@@ -28,14 +28,14 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap -mx-4">
+                    <div className="flex flex-wrap -mx-4">
 
                         <div className="w-full px-[300px] pt-5">
-                            <div className="mx-auto w-full  rounded-2xl bg-white p-2">
+                            <div className="w-full p-2 mx-auto bg-white rounded-2xl">
                                 <Disclosure>
                                     {({ open }) => (
                                         <>
-                                            <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                                            <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-purple-900 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                                                 <span>What is your refund policy?</span>
 
                                                 {!open ?
@@ -58,11 +58,11 @@ const Home = () => {
                         </div>
 
                         <div className="w-full px-[300px] pt-5">
-                            <div className="mx-auto w-full  rounded-2xl bg-white p-2">
+                            <div className="w-full p-2 mx-auto bg-white rounded-2xl">
                                 <Disclosure>
                                     {({ open }) => (
                                         <>
-                                            <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                                            <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-purple-900 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                                                 <span>What is your refund policy?</span>
 
                                                 {!open ?
@@ -86,11 +86,11 @@ const Home = () => {
 
 
                         <div className="w-full px-[300px] pt-5">
-                            <div className="mx-auto w-full  rounded-2xl bg-white p-2">
+                            <div className="w-full p-2 mx-auto bg-white rounded-2xl">
                                 <Disclosure>
                                     {({ open }) => (
                                         <>
-                                            <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                                            <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-purple-900 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                                                 <span>What is your refund policy?</span>
 
                                                 {!open ?
@@ -115,11 +115,11 @@ const Home = () => {
 
 
                         <div className="w-full px-[300px] pt-5">
-                            <div className="mx-auto w-full  rounded-2xl bg-white p-2">
+                            <div className="w-full p-2 mx-auto bg-white rounded-2xl">
                                 <Disclosure>
                                     {({ open }) => (
                                         <>
-                                            <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                                            <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-purple-900 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                                                 <span>What is your refund policy?</span>
 
                                                 {!open ?
