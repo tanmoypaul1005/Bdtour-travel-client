@@ -22,7 +22,6 @@ const TourPackage = () => {
     content = data?.data?.map((item, index) =>
       <NavLink to={`details/${item?._id}`}><TourPackageCard key={index} data={item} /></NavLink>
     );
-
   }
 
   return (
@@ -33,7 +32,7 @@ const TourPackage = () => {
           <div className="flex flex-wrap items-center -mx-4">
             <div className="w-full px-4">
               <div className="text-center">
-                <h1 className="font-semibold text-white text-4xl">
+                <h1 className="text-4xl font-semibold text-white">
                   Blog Grids
                 </h1>
               </div>
@@ -110,7 +109,7 @@ const TourPackage = () => {
 
       <section className="pt-5 pb-10 lg:pb-20">
         <div className="container">
-          <div className="flex justify-around flex-wrap -mx-1">
+          <div className="flex flex-wrap justify-around -mx-1">
             {content}
           </div>
         </div>

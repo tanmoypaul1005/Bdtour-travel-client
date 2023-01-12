@@ -13,9 +13,8 @@ export const BlogSlice = createApi({
     getBlog: builder.query({
       query: () => "/blog/get",
       keepUnusedDataFor: 0,
-      // providesTags: [],
+      // providesTags: [""],
     }),
-    
 
     // getTourPackageDetails: builder.query({
     //   query: (id) => `/blog/details/${id}`,

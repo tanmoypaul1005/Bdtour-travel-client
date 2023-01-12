@@ -8,24 +8,24 @@ const NavBar = () => {
 
   // let location = useLocation();
 
-  console.log("location", window.location.pathname)
+  // console.log("location", window.location.pathname)
 
   return (
     <>
       <div>
         <nav className="bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <img
-                    className="h-8 w-8"
+                    className="w-8 h-8"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                     alt="Workflow"
                   />
                 </div>
                 <div className="hidden md:block">
-                  <div className="ml-10 flex items-baseline space-x-4">
+                  <div className="flex items-baseline ml-10 space-x-4">
                     <a
                       href="/"
                       className={`hover:bg-[#2257AA] text-white px-3 py-2 rounded-md text-sm font-medium
@@ -73,18 +73,18 @@ const NavBar = () => {
                   </div>
                 </div>
               </div>
-              <div className="-mr-2 flex md:hidden">
+              <div className="flex -mr-2 md:hidden">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
                   type="button"
-                  className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                  className="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-900 rounded-md hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                   aria-controls="mobile-menu"
                   aria-expanded="false"
                 >
                   <span className="sr-only">Open main menu</span>
                   {!isOpen ? (
                     <svg
-                      className="block h-6 w-6"
+                      className="block w-6 h-6"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -100,7 +100,7 @@ const NavBar = () => {
                     </svg>
                   ) : (
                     <svg
-                      className="block h-6 w-6"
+                      className="block w-6 h-6"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -135,41 +135,41 @@ const NavBar = () => {
                   <a
                     href="/"
                     className=
-                    "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    "block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     Home
                   </a>
                   <a
                     href="/tour-package"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     Tour Package
                   </a>
 
                   <a
                     href="/"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     Projects
                   </a>
 
                   <a
                     href="/blog"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     Blog
                   </a>
 
                   <a
                     href="/booking-cart"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     Booking Cart
                   </a>
                   
                   <a
                     href="/singin"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     SingIn
                   </a>
