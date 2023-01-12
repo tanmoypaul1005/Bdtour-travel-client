@@ -164,7 +164,7 @@ function Footer() {
                       How it works
                     </a>
                   </li>
-                  
+
                   <li>
                     <a
                       href="javascript:void(0)"
@@ -178,6 +178,7 @@ function Footer() {
                       Privacy policy
                     </a>
                   </li>
+                  
                   <li>
                     <a
                       href="javascript:void(0)"
