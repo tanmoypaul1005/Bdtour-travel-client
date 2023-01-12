@@ -178,7 +178,7 @@ function Footer() {
                       Privacy policy
                     </a>
                   </li>
-                  
+
                   <li>
                     <a
                       href="javascript:void(0)"
@@ -192,6 +192,7 @@ function Footer() {
                       Terms of Service
                     </a>
                   </li>
+                  
                   <li>
                     <a
                       href="javascript:void(0)"
