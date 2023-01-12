@@ -27,7 +27,7 @@ function Footer() {
                     href="javascript:void(0)"
                     className="px-3 text-[#dddddd] hover:text-white"
                   >
-                    
+
                     <svg
                       width="10"
                       height="18"
@@ -66,6 +66,7 @@ function Footer() {
                       <path d="M13.5985 3.82184C13.2383 3.82184 12.9336 4.12013 12.9336 4.47266C12.9336 4.82519 13.2383 5.12349 13.5985 5.12349C13.9587 5.12349 14.2634 4.82519 14.2634 4.47266C14.2634 4.12013 13.9864 3.82184 13.5985 3.82184Z" />
                     </svg>
                   </a>
+                  
                   <a
                     href="javascript:void(0)"
                     className="px-3 text-[#dddddd] hover:text-white"
