@@ -183,8 +183,7 @@ function Footer() {
                       text-base text-[#f3f4fe]
                       hover:text-primary
                       leading-loose
-                      mb-2
-                    "
+                      mb-2"
                     >
                       Terms of Service
                     </a>
