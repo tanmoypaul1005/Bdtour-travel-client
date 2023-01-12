@@ -22,11 +22,11 @@ const Blog = () => {
         content = <Error message="There was an error" />;
     }
 
-    if (!isLoading && !isError && data?.data?.length > 0) {
-        content = data?.data?.map((item, index) =>
-          <NavLink to={`details/${item?._id}`}><BlogCard key={index} data={item} /></NavLink>
-        );
-    }
+    // if (!isLoading && !isError && data?.data?.length > 0) {
+    //     content = data?.data?.map((item, index) =>
+    //       <NavLink to={`details/${item?._id}`}><BlogCard key={index} data={item} /></NavLink>
+    //     );
+    // }
 
     return (
         <div>
