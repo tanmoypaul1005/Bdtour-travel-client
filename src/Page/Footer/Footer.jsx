@@ -53,6 +53,7 @@ function Footer() {
                     href=""
                     className="px-3 text-[#dddddd] hover:text-white"
                   >
+                    
                     <svg
                       width="18"
                       height="18"
